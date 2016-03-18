@@ -1,0 +1,31 @@
+{
+  "name": "giftreg",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular2": "latest",
+    "es6-promise": "latest",
+    "es6-shim": "latest",
+    "express": "latest",
+    "jade": "latest",
+    "reflect-metadata": "latest",
+    "rxjs": "latest",
+    "systemjs": "latest",
+    "zone.js": "latest"
+  },
+  "devDependencies": 
+  {
+    "colors": "latest",
+    "typings": "latest",
+    "typescript": "latest",
+    "gulp-typescript": "latest",
+    "gulp": "latest",
+    "gulp-less": "latest",
+    "gulp-watch": "latest",
+    "gulp-copy": "latest"
+  },
+  "scripts": {
+    "typings": "typings",
+    "server": "node --harmony-destructuring index.js"
+  }
+}
