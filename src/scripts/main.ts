@@ -1,5 +1,5 @@
 import {bootstrap} from 'angular2/platform/browser'
-import {provide} from 'angular2/core'
+import {provide, Component} from 'angular2/core'
 import {Car} from './car'
 import {RacingCar} from './racing-car'
 import {PetrolEngine} from './impl/engine/petrol'
@@ -21,4 +21,29 @@ bootstrap(RacingCar,
 	provide('Engine', {useClass:PetrolEngine}), 
 	provide('Tire', {useClass: Summer19Inch}), 
 	provide('Door', {useClass: ButterflyDoor})
+])
+
+//- of course you could create stuff dynamically
+import {carFactory} from './car-factory'
+let mazda = carFactory( 'Mazda',
+{
+	selector: 'factory-car',
+	template: 
+	`<div class="col-md-4">
+		<div class="panel panel-danger">
+	   	<div class="panel-heading">{{name}}</div>
+	    <div class="panel-body"><h4>╺⊘╾╼⊘╸</h4></div>
+	    <ul class="list-group">
+	      <li class="list-group-item">engine: {{engineType}} <span *ngIf="engineCapacity">- {{engineCapacity}} cc</span></li>
+	      <li class="list-group-item">tires: {{tireWidth}} x {{tireDiameter}} x {{tireRim}}</li>
+	      <li class="list-group-item">doors: {{doorType}}</li>
+	    </ul>
+	  </div>
+  </div>`
+})
+bootstrap( mazda, 
+[
+	provide('Engine', {useClass:DieselEngine}), 
+	provide('Tire', {useClass: Summer19Inch}), 
+	provide('Door', {useClass: NormalDoor})
 ])
