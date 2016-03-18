@@ -10,3 +10,5 @@ If it's working it should look like this:
 
 ![Screenshot]
 (https://github.com/gizm0bill/angular2-di-example/blob/develop/screenshot.png)
+
+PS: You can find the juicy stuff in `src/scripts`
