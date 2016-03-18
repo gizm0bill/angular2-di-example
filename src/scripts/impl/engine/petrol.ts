@@ -4,4 +4,5 @@ import {Injectable} from 'angular2/core'
 export class PetrolEngine implements Engine
 {
 	type = 'petrol';
+	capacity = 1500;
 }

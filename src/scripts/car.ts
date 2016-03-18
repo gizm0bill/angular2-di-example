@@ -12,7 +12,7 @@ import {Door} from './interf/door'
 	   	<div class="panel-heading">{{name}}</div>
 	    <div class="panel-body"><h4>╺⊖╾╼⊖╸</h4></div>
 	    <ul class="list-group">
-	      <li class="list-group-item">engine: {{engineType}}</li>
+	      <li class="list-group-item">engine: {{engineType}} <span *ngIf="engineCapacity">- {{engineCapacity}} cc</span></li>
 	      <li class="list-group-item">tires: {{tireWidth}} x {{tireDiameter}} x {{tireRim}}</li>
 	      <li class="list-group-item">doors: {{doorType}}</li>
 	    </ul>
