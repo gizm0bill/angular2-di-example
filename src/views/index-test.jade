@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta(http-equiv="content-type", content="text/html;charset=utf-8")
+    title Angular2 DI Example Unit Tests
+    link(rel="stylesheet", href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css")
+
+    script(src="node_modules/es6-shim/es6-shim.min.js")
+    script(src="node_modules/systemjs/dist/system-polyfills.js")
+    script(src="node_modules/angular2/bundles/angular2-polyfills.js")
+    script(src="node_modules/systemjs/dist/system.src.js")
+    script(src="node_modules/rxjs/bundles/Rx.js")
+    script(src="node_modules/angular2/bundles/angular2.dev.js")
+    script(src="node_modules/angular2/bundles/testing.dev.js")
+    script(src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js")
+    script(src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js")
+    script(src="node_modules/jasmine-core/lib/jasmine-core/boot.js")
+
+    script.
+      System.config({ packages: { 'pub': {defaultExtension: 'js'} } });
+
+      Promise.all
+      ([
+        System.import('pub/tests/main.spec')
+      ])
+        .then(window.onload)
+        .catch(console.error.bind(console));
+
+  body

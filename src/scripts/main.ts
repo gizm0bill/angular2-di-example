@@ -16,7 +16,7 @@ import {ButterflyDoor} from './impl/door/butterfly'
 //- bootstrap each component with desired implementation
 bootstrap(Car, 
 [
-	provide('Engine', {useClass:DieselEngine}), 
+	provide('Engine', {useClass: DieselEngine}), 
 	provide('Tire', {useClass: Winter17Inch}), 
 	provide('Door', {useClass: NormalDoor})
 ])
